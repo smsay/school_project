@@ -18,13 +18,13 @@ public class Database {
     ));
 
     public static List<Parent> parentList = new ArrayList<>(List.of(
-            new Parent(1,"John", "Wayne"),
-            new Parent(2,"Mike", "Junior")
+            new Parent(1,"Oleksiy", "Flora"),
+            new Parent(2,"Umran", "Bilal")
     ));
 
     public static List<Student> studentList = new ArrayList<>(List.of(
-            new Student(1,12345L, "Jayne", "Smith", parentList.get(0), courseList ),
-            new Student(2, 12346L, "Candy", "Brown", parentList.get(1),courseList )
+            new Student(1,12345L, "Mansur", "Rasul", parentList.get(0), courseList ),
+            new Student(2, 12346L, "Hrvoje", "Diana", parentList.get(1),courseList )
     ));
 
     public static List<School> schoolList = new ArrayList<>(List.of(
