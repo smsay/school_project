@@ -1,10 +1,9 @@
-package com.gogetters.entity;
+package com.codeBusters.entity;
 
-import com.gogetters.enums.WeekDays;
+import com.codeBusters.enums.WeekDays;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import java.util.List;
 

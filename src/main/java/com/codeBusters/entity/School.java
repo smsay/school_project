@@ -1,9 +1,8 @@
-package com.gogetters.entity;
+package com.codeBusters.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import java.util.List;
 
