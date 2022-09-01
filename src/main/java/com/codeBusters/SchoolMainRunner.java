@@ -18,6 +18,7 @@ public class SchoolMainRunner {
        SchoolMainRunner.courseService = new CourseService();
        SchoolMainRunner.parentService = new ParentService();
        SchoolMainRunner.studentService = new StudentService();
+
     }
 
     public static void main(String[] args) {
