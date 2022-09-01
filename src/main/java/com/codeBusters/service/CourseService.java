@@ -2,24 +2,24 @@ package com.codeBusters.service;
 
 import java.util.List;
 
-public class Course implements CRUDService<Course>{
+public class CourseService implements CRUDService<CourseService>{
     @Override
-    public Course findById(int id) {
+    public CourseService findById(int id) {
         return null;
     }
 
     @Override
-    public List<Course> findAll() {
+    public List<CourseService> findAll() {
         return null;
     }
 
     @Override
-    public void save(Course course) {
+    public void save(CourseService course) {
 
     }
 
     @Override
-    public void update(Course course) {
+    public void update(CourseService course) {
 
     }
 
