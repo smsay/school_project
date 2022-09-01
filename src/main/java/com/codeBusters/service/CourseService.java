@@ -1,25 +1,27 @@
 package com.codeBusters.service;
 
+import com.codeBusters.entity.Course;
+
 import java.util.List;
 
-public class CourseService implements CRUDService<CourseService>{
+public class CourseService implements CRUDService<Course>{
     @Override
-    public CourseService findById(int id) {
+    public Course findById(int id) {
         return null;
     }
 
     @Override
-    public List<CourseService> findAll() {
+    public List<Course> findAll() {
         return null;
     }
 
     @Override
-    public void save(CourseService course) {
+    public void save(Course course) {
 
     }
 
     @Override
-    public void update(CourseService course) {
+    public void update(Course course) {
 
     }
 
