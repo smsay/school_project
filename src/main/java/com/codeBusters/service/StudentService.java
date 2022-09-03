@@ -17,7 +17,7 @@ public class StudentService implements CRUDService<Student>{
 
     @Override
     public List<Student> findAll() {
-        return null;
+        return Database.studentList;
     }
 
     @Override
