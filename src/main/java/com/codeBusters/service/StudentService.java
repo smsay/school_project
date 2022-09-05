@@ -5,6 +5,7 @@ import com.codeBusters.entity.Student;
 
 import javax.xml.crypto.Data;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StudentService implements CRUDService<Student>{
 
@@ -22,7 +23,9 @@ public class StudentService implements CRUDService<Student>{
 
     @Override
     public void save(Student student) {
-        Database.studentList.add(student);
+        if(!Database.studentList.contains(student.getId())){
+            Database.studentList.add(student);
+        }
     }
 
     @Override
