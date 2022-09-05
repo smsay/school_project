@@ -22,7 +22,7 @@ public class StudentService implements CRUDService<Student>{
 
     @Override
     public void save(Student student) {
-
+        Database.studentList.add(student);
     }
 
     @Override
