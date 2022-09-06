@@ -14,8 +14,10 @@ public class SchoolService implements CRUDService<School> {
 
     @Override
     public School findById(int id) {
+          return findAll().stream()
+                  .filter(school -> school.getId()==id)
+                  .findFirst().orElseThrow(()->new NoSuchElementException("There is no School with id "+id));
 
-        return null;
     }
 
     @Override
@@ -33,6 +35,12 @@ public class SchoolService implements CRUDService<School> {
 
     @Override
     public void update(School o) {
+
+        School schoolToUpdate= findById(o.getId());
+        schoolToUpdate.setName(o.getName());
+        schoolToUpdate.setStudents(o.getStudents());
+        schoolToUpdate.setCourses(o.getCourses());
+
 
     }
 
