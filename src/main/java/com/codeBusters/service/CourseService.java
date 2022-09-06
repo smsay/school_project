@@ -35,5 +35,7 @@ public class CourseService implements CRUDService<Course>{
     @Override
     public void deleteById(Long id) {
 
+            findAll().removeIf(course -> course.getId()==id);
+
     }
 }
