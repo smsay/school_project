@@ -10,9 +10,9 @@ import java.util.NoSuchElementException;
 
 @AllArgsConstructor
 @NoArgsConstructor
-public class SchoolService implements CRUDService <School>{
+public class SchoolService implements CRUDService<School> {
 
-   @Override
+    @Override
     public School findById(int id) {
 
         return null;
@@ -25,7 +25,9 @@ public class SchoolService implements CRUDService <School>{
 
     @Override
     public void save(School schoolToSave) {
-
+        if (findAll().stream().anyMatch(school -> school.equals(schoolToSave))) {
+            System.err.println("This school is already in the list " + schoolToSave);
+        } else Database.schoolList.add(schoolToSave);
     }
 
 
