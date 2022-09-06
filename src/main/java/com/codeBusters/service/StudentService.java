@@ -31,6 +31,14 @@ public class StudentService implements CRUDService<Student>{
     @Override
     public void update(Student student) {
 
+        Student studentToUpdate = findById(student.getId());
+        studentToUpdate.setFirstName(student.getFirstName());
+        studentToUpdate.setLastName(student.getLastName());
+        studentToUpdate.setStudentNumber(student.getStudentNumber());
+        studentToUpdate.setCourses(student.getCourses());
+        studentToUpdate.setParent(student.getParent());
+
+
     }
 
     @Override
