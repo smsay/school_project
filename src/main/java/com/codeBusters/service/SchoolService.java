@@ -46,6 +46,7 @@ public class SchoolService implements CRUDService<School> {
 
     @Override
     public void deleteById(Long id) {
+        findAll().removeIf(school -> school.getId()==id);
 
     }
 }
