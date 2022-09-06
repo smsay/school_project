@@ -1,6 +1,7 @@
 package com.codeBusters.service;
 
 import com.codeBusters.database.Database;
+import com.codeBusters.entity.School;
 import com.codeBusters.entity.Student;
 
 import javax.xml.crypto.Data;
@@ -35,6 +36,6 @@ public class StudentService implements CRUDService<Student>{
 
     @Override
     public void deleteById(Long id) {
-
+        Database.studentList.removeIf(student -> student.getId()==id);
     }
 }
