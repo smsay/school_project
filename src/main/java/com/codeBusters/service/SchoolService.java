@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 @AllArgsConstructor
-@NoArgsConstructor
+//@NoArgsConstructor
 public class SchoolService implements CRUDService<School> {
 
     @Override
