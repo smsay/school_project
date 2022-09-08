@@ -4,7 +4,9 @@ import com.codeBusters.database.Database;
 import com.codeBusters.entity.Course;
 import com.codeBusters.entity.Student;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CourseService implements CRUDService<Course>{
 
@@ -19,11 +21,13 @@ public class CourseService implements CRUDService<Course>{
 
     @Override
     public List<Course> findAll() {
-        return null;
+        return Database.courseList.stream()
+                .filter(course -> course.getMinScore()<70).collect(Collectors.toList());
     }
 
     @Override
     public void save(Course course) {
+    Database.courseList.stream().collect(Collectors.toMap((Course::getName),(Course::getMinScore)));
 
     }
 
