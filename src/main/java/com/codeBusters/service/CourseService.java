@@ -33,6 +33,13 @@ public class CourseService implements CRUDService<Course>{
 
     @Override
     public void update(Course course) {
+        Boolean AllFail=Database.courseList.stream()
+                .noneMatch(p->p.getMinScore()>60);
+
+        if (AllFail) {
+            System.out.println("Test is void and will be repeated");
+        }
+
 
     }
 
